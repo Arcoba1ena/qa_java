@@ -10,7 +10,7 @@ import org.mockito.Mockito;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.junit.runners.Parameterized;
-import static com.constants.Constants.*;
+import static com.example.constants.Constants.*;
 
 @RunWith(Parameterized.class)
 public class LionTest {
@@ -37,17 +37,17 @@ public class LionTest {
     @Test
     public void testCoverageDoesHaveMane() throws Exception {
         Lion male = new Lion(LION_MALE);
-        Assert.assertTrue("should be passed", male.doesHaveMane());
+        Assert.assertTrue("should be [true]", male.doesHaveMane());
 
         Lion female = new Lion(LION_FEMALE);
-        Assert.assertFalse(female.doesHaveMane());
+        Assert.assertFalse("should be [false]",female.doesHaveMane());
     }
 
     @Test(expected = Exception.class)
     public void testCoverageDoesHaveManeUnValid() throws Exception {
         Lion lion = new Lion(NEUTER_GENDER);
         lion.doesHaveMane();
-        Assert.assertFalse("should be passed", lion.doesHaveMane());
+        Assert.assertFalse("should be [error]", lion.doesHaveMane());
     }
 
     @Test

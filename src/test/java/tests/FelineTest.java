@@ -9,7 +9,7 @@ import org.mockito.Mockito;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.junit.runners.Parameterized;
-import static com.constants.Constants.*;
+import static com.example.constants.Constants.*;
 
 @RunWith(Parameterized.class)
 public class FelineTest {
