@@ -1,8 +1,12 @@
 package com.example;
 
 import java.util.List;
+import java.util.Arrays;
 
 public class Feline extends Animal implements Predator {
+
+    public List<String> felineAttributes = Arrays.asList("Самец", "Самка", "Оно",
+            "Кошачьи", "Животные, Птицы, Рыба", "Мяу");
 
     @Override
     public List<String> eatMeat() throws Exception {
